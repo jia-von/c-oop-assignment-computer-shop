@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Computer_Shop.Peripheral;
 
 namespace Computer_Shop
 {
@@ -34,21 +33,5 @@ namespace Computer_Shop
             Unless the type is “Integrated”.
             Otherwise, adds the peripheral to the list.
          */
-
-        public void ConnectedPeripheral(Peripheral.Peripheral peripheral)
-        {
-            try
-            {
-                if (peripheral != ConnectorType.Connector.Integrated)
-                {
-                    Peripherals.Add(peripheral);
-                }
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("There are no available connectors of the connection-type of the peripheral");
-            }
-        }
     }
 }

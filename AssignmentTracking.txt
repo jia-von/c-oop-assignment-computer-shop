@@ -22,17 +22,21 @@ A “Brand” property (string). --Completed, default public string get/set---
 A “Size” property (int). --Completed, default public int get/set---
 
 
+---------------------EVERYTHING HERE IS WITHIN "DEVICE" NAMEPSACE-------------------------------------------------
+
 Create a “Laptop” class derived from “Device” with the following: --Completed with default public class--
 A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned. --Completed with default public get/set------
 A “Keyboard” property that must have a “Keyboard” object with the “Integrated” connector type assigned. ---Completed with default public get/set------
 A default and greedy constructor.----Completed with default creedy constructor------
 
-Create a “Desktop” class derived from “Device” with the following:
-A default and greedy constructor.
+Create a “Desktop” class derived from “Device” with the following: ---- Completed default public class------
+A default and greedy constructor. --Default public constructor with override Brand----
 
-Create a “CellPhone” class derived from “Device” with the following:
-A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
-A default and greedy constructor.
+Create a “CellPhone” class derived from “Device” with the following: --Completed with default public class-------
+A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned. ---TODO research about Integrated connector type assigned------
+A default and greedy constructor. ---Completed default public greedy constructor-------
+
+------------------------END OF "DEVICE NAME SPACE--------------------------------------"
 
 
 ------Everything within this line belongs to the "Peripheral" namespace -----------------------------------
