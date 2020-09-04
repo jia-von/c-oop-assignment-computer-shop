@@ -34,7 +34,8 @@ namespace Computer_Shop
 
         public void ConnectedPeripheral(Peripheral.Peripheral peripheral)
         {
-            Console.WriteLine(peripheral);
+            Peripherals = new List<Peripheral.Peripheral>();
+            Peripherals.Add(peripheral);
         }
     }
 }
