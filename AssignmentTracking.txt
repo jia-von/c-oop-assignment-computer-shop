@@ -1,4 +1,4 @@
-﻿Create an abstract “Device” class with the following: -- Completed ----
+﻿Create an abstract “Device” class with the following: -- Completed, Device folder completed ----
 A “Brand” property --Default Public Abstract get/set Completed, ---
 A “CPU” property (reference to “CPU” object) -- Completed with public get/set---
 A “Memory” property (a list of “Memory” objects) --Completed with public get/set---
@@ -20,7 +20,7 @@ A “Brand” property (string). --Completed, default public string get/set---
 A “Size” property (int). --Completed, default public int get/set---
 
 
-Create a “Laptop” class derived from “Device” with the following:
+Create a “Laptop” class derived from “Device” with the following: --Completed with default public class--
 A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
 A “Keyboard” property that must have a “Keyboard” object with the “Integrated” connector type assigned.
 A default and greedy constructor.
@@ -30,19 +30,24 @@ A default and greedy constructor.
 Create a “CellPhone” class derived from “Device” with the following:
 A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
 A default and greedy constructor.
+
 Create a public “Connector” enumeration of “USBTypeA”, “USBTypeB”, “USBTypeC”, “MiniUSB”, “MicroUSB”, “DisplayPort” and “Integrated”.
-Create an abstract “Peripheral” class with the following:
-A “Brand” property (string).
-Create a “Keyboard” class derived from “Peripheral” with the following:
-A “Type” enumeration of: “Mechanical” or “Membrane”.
-A “ConnectorType” property with a value of the “Connector” enumeration.
-A default and greedy constructor.
-Create a “Mouse” class derived from “Peripheral” with the following:
-A “ButtonCount” property (int).
-A “ConnectorType” with a value of the “Connector” enumeration.
-A default and greedy constructor.
-Create a “Screen” class derived from “Peripheral” with the following:
-A “Width” property, in whole pixels (int).
-A “Height” property, in whole pixels (int).
-A “ConnectorType” with a value of the “Connector” enumeration.
-A default and greedy constructor.
+
+Create an abstract “Peripheral” class with the following: -- Created Peripheral Folder to store the peripherals---
+A “Brand” property (string). --Created default public prop with get/set---
+
+		Create a “Keyboard” class derived from “Peripheral” with the following: --Completed default public class keyboard---
+		A “Type” enumeration of: “Mechanical” or “Membrane”. --Completed enum----
+		A “ConnectorType” property with a value of the “Connector” enumeration.
+		A default and greedy constructor.
+
+		Create a “Mouse” class derived from “Peripheral” with the following:
+		A “ButtonCount” property (int).
+		A “ConnectorType” with a value of the “Connector” enumeration.
+		A default and greedy constructor.
+
+		Create a “Screen” class derived from “Peripheral” with the following:
+		A “Width” property, in whole pixels (int).
+		A “Height” property, in whole pixels (int).
+		A “ConnectorType” with a value of the “Connector” enumeration.
+		A default and greedy constructor.
