@@ -8,5 +8,18 @@ namespace Computer_Shop.Peripheral
     {
         //A “Brand” property (string).
         public string Brand { get; set; }
+
+        //Create a public “Connector” enumeration of “USBTypeA”, “USBTypeB”, “USBTypeC”, “MiniUSB”, “MicroUSB”, “DisplayPort” and “Integrated”.
+
+        public enum Connector
+        {
+            USBTypeA,
+            USBTypeB,
+            USBTypeC,
+            MiniUSB,
+            MicroUSB,
+            DisplayPort,
+            Integrated,
+        }
     }
 }

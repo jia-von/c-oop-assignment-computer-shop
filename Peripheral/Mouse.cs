@@ -4,20 +4,14 @@ using System.Text;
 
 namespace Computer_Shop.Peripheral
 {
-    public class Keyboard : Peripheral //Create a “Keyboard” class derived from “Peripheral” with the following:
+    public class Mouse : Peripheral //Create a “Mouse” class derived from “Peripheral” with the following:
     {
         /*
          		
 		            
-		            A “ConnectorType” property with a value of the “Connector” enumeration.
+		            A “ConnectorType” with a value of the “Connector” enumeration.
 		            A default and greedy constructor.
          */
-        //A “Type” enumeration of: “Mechanical” or “Membrane”.
-        enum Type
-        {
-            Mechanical,
-            Membrane
-        }
 
         public enum Connector
         {
@@ -29,7 +23,7 @@ namespace Computer_Shop.Peripheral
             DisplayPort,
             Integrated,
         }
-
-        public ConnectorType MyProperty { get; set; }
+        public int ButtonCount { get; set; } //A “ButtonCount” property (int).
+        public int MyProperty { get; set; }
     }
 }
