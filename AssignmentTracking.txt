@@ -40,13 +40,14 @@ A “Brand” property (string). --Created default public prop with get/set---
 
 		Create a “Keyboard” class derived from “Peripheral” with the following: --Completed default public class keyboard---
 		A “Type” enumeration of: “Mechanical” or “Membrane”. --Completed enum----
-		A “ConnectorType” property with a value of the “Connector” enumeration.
-		A default and greedy constructor.
+		A “ConnectorType” property with a value of the “Connector” enumeration. --Completed public default get/set----
+		A default and greedy constructor.--Completed default greedy constructor with both KeyType and ConnectorType---
+
 
 		Create a “Mouse” class derived from “Peripheral” with the following: --Completed default public class mouse----
 		A “ButtonCount” property (int). --public default prop get/set----
-		A “ConnectorType” with a value of the “Connector” enumeration.
-		A default and greedy constructor.
+		A “ConnectorType” with a value of the “Connector” enumeration.  --Completed with public prop get/set---
+		A default and greedy constructor. --Completed greedy constructor----
 
 		Create a “Screen” class derived from “Peripheral” with the following:
 		A “Width” property, in whole pixels (int).
