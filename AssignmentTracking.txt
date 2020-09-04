@@ -2,7 +2,7 @@
 A “Brand” property --Default Public Abstract get/set Completed, ---
 A “CPU” property (reference to “CPU” object) -- Completed with public get/set---
 A “Memory” property (a list of “Memory” objects) --Completed with public get/set---
-A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available)
+A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available) ---Completed with default public access modifiers-----
 A “Peripherals” property (a polymorphic list of Peripheral objects), private -- Completed---
 
 A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and: --TODO-------!!!!!!!
