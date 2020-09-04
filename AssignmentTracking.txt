@@ -23,9 +23,9 @@ A “Size” property (int). --Completed, default public int get/set---
 
 
 Create a “Laptop” class derived from “Device” with the following: --Completed with default public class--
-A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
-A “Keyboard” property that must have a “Keyboard” object with the “Integrated” connector type assigned.
-A default and greedy constructor.
+A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned. --Completed with default public get/set------
+A “Keyboard” property that must have a “Keyboard” object with the “Integrated” connector type assigned. ---Completed with default public get/set------
+A default and greedy constructor.----Completed with default creedy constructor------
 
 Create a “Desktop” class derived from “Device” with the following:
 A default and greedy constructor.
@@ -34,10 +34,13 @@ Create a “CellPhone” class derived from “Device” with the following:
 A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
 A default and greedy constructor.
 
-Create a public “Connector” enumeration of “USBTypeA”, “USBTypeB”, “USBTypeC”, “MiniUSB”, “MicroUSB”, “DisplayPort” and “Integrated”. --Completed, public class, with enum values called ConnectorType-----
+
+------Everything within this line belongs to the "Peripheral" namespace -----------------------------------
 
 Create an abstract “Peripheral” class with the following: -- Created Peripheral Folder to store the peripherals---
 A “Brand” property (string). --Created default public prop with get/set---
+
+Create a public “Connector” enumeration of “USBTypeA”, “USBTypeB”, “USBTypeC”, “MiniUSB”, “MicroUSB”, “DisplayPort” and “Integrated”. --Completed, public class, with enum values called ConnectorType-----
 
 		Create a “Keyboard” class derived from “Peripheral” with the following: --Completed default public class keyboard---
 		A “Type” enumeration of: “Mechanical” or “Membrane”. --Completed enum----
@@ -55,3 +58,5 @@ A “Brand” property (string). --Created default public prop with get/set---
 		A “Height” property, in whole pixels (int). -- Completed Default public prop with get/set ----
 		A “ConnectorType” with a value of the “Connector” enumeration. --Completed with public prop get/set---
 		A default and greedy constructor. --Completed greedy constructor----
+
+-------END OF THE "Peripheral" NAMESPACE -----------------------------------------------------------------------
