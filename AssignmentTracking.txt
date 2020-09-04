@@ -1,0 +1,48 @@
+﻿Create an abstract “Device” class with the following: -- Completed ----
+A “Brand” property --Default Public Abstract get/set Completed, ---
+A “CPU” property (reference to “CPU” object) -- Completed with public get/set---
+A “Memory” property (a list of “Memory” objects) --Completed with public get/set---
+A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available)
+A “Peripherals” property (a polymorphic list of Peripheral objects), private
+A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and:
+Throws an exception if there are no available connectors of the connection-type of the peripheral.
+Unless the type is “Integrated”.
+Otherwise, adds the peripheral to the list.
+A “DisconnectPeripheral()” method that accepts a type of peripheral, and will disconnect all connected peripherals of that type.
+An abstract “StartUp()” method that will be overridden in each derived class, with some functionality of your choice. Write something to the console, make the computer beep, whatever you’d like.
+
+Create a “CPU” class with the following: --Completed, public class---
+A “Brand” property (string).  --Completed, default public get/set prop---
+A “Speed” property (double). --Completed, default public get/set prop---
+
+Create a “Memory” class with the following: -- Competed, default public class--
+A “Brand” property (string). --Completed, default public string get/set---
+A “Size” property (int). --Completed, default public int get/set---
+
+
+Create a “Laptop” class derived from “Device” with the following:
+A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
+A “Keyboard” property that must have a “Keyboard” object with the “Integrated” connector type assigned.
+A default and greedy constructor.
+
+Create a “Desktop” class derived from “Device” with the following:
+A default and greedy constructor.
+Create a “CellPhone” class derived from “Device” with the following:
+A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
+A default and greedy constructor.
+Create a public “Connector” enumeration of “USBTypeA”, “USBTypeB”, “USBTypeC”, “MiniUSB”, “MicroUSB”, “DisplayPort” and “Integrated”.
+Create an abstract “Peripheral” class with the following:
+A “Brand” property (string).
+Create a “Keyboard” class derived from “Peripheral” with the following:
+A “Type” enumeration of: “Mechanical” or “Membrane”.
+A “ConnectorType” property with a value of the “Connector” enumeration.
+A default and greedy constructor.
+Create a “Mouse” class derived from “Peripheral” with the following:
+A “ButtonCount” property (int).
+A “ConnectorType” with a value of the “Connector” enumeration.
+A default and greedy constructor.
+Create a “Screen” class derived from “Peripheral” with the following:
+A “Width” property, in whole pixels (int).
+A “Height” property, in whole pixels (int).
+A “ConnectorType” with a value of the “Connector” enumeration.
+A default and greedy constructor.
