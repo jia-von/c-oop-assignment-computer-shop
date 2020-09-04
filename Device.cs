@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Computer_Shop.Peripheral;
 
 namespace Computer_Shop
 {
-    /*
-        A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available)
-
-     */
-
     //Create an abstract “Device” class with the following:
     public abstract class Device
     {
@@ -21,7 +17,8 @@ namespace Computer_Shop
         //A “Memory” property (a list of “Memory” objects) --Default public get.set
         public Memory Memory { get; set; }
 
-        //public ReadOnlyMemory<Connector>
+        // A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available)
+        public ReadOnlyMemory<Peripheral.Peripheral.Connector> Connectors { get; set; }
 
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private
         private List<Peripheral.Peripheral> Peripherals { get; set; }
