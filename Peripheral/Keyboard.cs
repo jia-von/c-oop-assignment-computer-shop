@@ -17,10 +17,14 @@ namespace Computer_Shop.Peripheral
         //A “ConnectorType” property with a value of the “Connector” enumeration.
         public Connector ConnectorType { get; set; }
 
-        //Override method of the brand to make create security
-        public override string Brand { get; }
-
         //A default and greedy constructor.
+
+        public Keyboard()
+        {
+            KeyType = 0;
+            ConnectorType = 0;
+            Brand = "Default Keyboard";
+        }
         public Keyboard(Type keyType, Connector connectorType, string brand)
         {
             KeyType = keyType;

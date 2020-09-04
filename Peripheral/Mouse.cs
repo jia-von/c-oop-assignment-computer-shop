@@ -9,9 +9,15 @@ namespace Computer_Shop.Peripheral
         public int ButtonCount { get; set; } //A “ButtonCount” property (int).
         public Connector ConnectorType { get; set; } //A “ConnectorType” with a value of the “Connector” enumeration.
 
-        public override string Brand { get; }// added for security reasons and fun!
-
         //A default and greedy constructor.
+        
+        public Mouse()
+        {
+            ButtonCount = 0;
+            ConnectorType = 0;
+            Brand = "Default Mouse";
+
+        }
         public Mouse(int buttonCount, Connector connectorType, string brand)
         {
             ButtonCount = buttonCount;

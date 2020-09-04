@@ -5,12 +5,13 @@ A “Memory” property (a list of “Memory” objects) --Completed with public
 A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available) ---Completed with default public access modifiers-----
 A “Peripherals” property (a polymorphic list of Peripheral objects), private -- Completed---
 
-A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and: --TODO-------!!!!!!!
+A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and: ----Method that accepts polymorphic argument is added--------------
 Throws an exception if there are no available connectors of the connection-type of the peripheral.
 Unless the type is “Integrated”.
 Otherwise, adds the peripheral to the list.
 
 A “DisconnectPeripheral()” method that accepts a type of peripheral, and will disconnect all connected peripherals of that type.
+
 An abstract “StartUp()” method that will be overridden in each derived class, with some functionality of your choice. Write something to the console, make the computer beep, whatever you’d like.
 
 Create a “CPU” class with the following: --Completed, public class---
