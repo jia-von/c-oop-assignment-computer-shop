@@ -29,6 +29,7 @@ A default and greedy constructor.
 
 Create a “Desktop” class derived from “Device” with the following:
 A default and greedy constructor.
+
 Create a “CellPhone” class derived from “Device” with the following:
 A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
 A default and greedy constructor.
@@ -49,8 +50,8 @@ A “Brand” property (string). --Created default public prop with get/set---
 		A “ConnectorType” with a value of the “Connector” enumeration.  --Completed with public prop get/set---
 		A default and greedy constructor. --Completed greedy constructor----
 
-		Create a “Screen” class derived from “Peripheral” with the following:
-		A “Width” property, in whole pixels (int).
-		A “Height” property, in whole pixels (int).
-		A “ConnectorType” with a value of the “Connector” enumeration.
-		A default and greedy constructor.
+		Create a “Screen” class derived from “Peripheral” with the following: --Completed with default public class---
+		A “Width” property, in whole pixels (int). -- Completed Default public prop with get/set----
+		A “Height” property, in whole pixels (int). -- Completed Default public prop with get/set ----
+		A “ConnectorType” with a value of the “Connector” enumeration. --Completed with public prop get/set---
+		A default and greedy constructor. --Completed greedy constructor----
