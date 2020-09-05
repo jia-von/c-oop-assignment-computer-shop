@@ -32,6 +32,11 @@ namespace Computer_Shop
             Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary); //ReadOnly must have parameters of IDictionary<TKey,TValue>
             //@link: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1#properties
         }
+
+        public override void StartUp()
+        {
+            Console.Beep();
+        }
     }
 
 }

@@ -69,5 +69,15 @@ namespace Computer_Shop
         /*
          A “DisconnectPeripheral()” method that accepts a type of peripheral, and will disconnect all connected peripherals of that type.
          */
+        public void DisconnectedPeripheral(Peripheral.Peripheral peripheral)
+        {
+            Console.WriteLine(peripheral);
+        }
+
+        /*
+         An abstract “StartUp()” method that will be overridden in each derived class, with some functionality of your choice. Write something to the console, make the computer beep, whatever you’d like.
+         */
+
+        public abstract void StartUp();
     }
 }

@@ -32,5 +32,10 @@ namespace Computer_Shop
             _dictionary = dictionary;
             Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary); //ReadOnly must have parameters of IDictionary<TKey,TValue>
         }
+
+        public override void StartUp()
+        {
+            Console.Beep();
+        }
     }
 }

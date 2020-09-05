@@ -40,6 +40,9 @@ namespace Computer_Shop
             Screen = screen;
             Keyboard = keyboard;
         }
-
+        public override void StartUp()
+        {
+            Console.Beep();
+        }
     }
 }
