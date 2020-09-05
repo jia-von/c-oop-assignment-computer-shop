@@ -63,7 +63,8 @@ namespace Computer_Shop
          */
         public void DisconnectedPeripheral(Peripheral.Peripheral peripheral)
         {
-            Peripherals.RemoveAll(x => x.Brand == peripheral.Brand); //remove based on brand because it is the most specific type
+            Peripherals.RemoveAll(x => x.GetType() == peripheral.GetType());
+            //Note to User, it is assumed that that the computer has only one screen, one mouse, and one keyboard as peripheral. It is understandable that the computer have have more than one of these peripherals. To simplyfy things for removal, I decided it will be removed based on the GetType();
         }
 
         /*

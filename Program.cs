@@ -7,7 +7,7 @@ namespace Computer_Shop
     {
         static void Main(string[] args)
         {
-
+ 
             Cellphone newCell = new Cellphone()
             {
                 Brand = "iPhone 11",
@@ -39,7 +39,8 @@ namespace Computer_Shop
 
             Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
 
-            newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD"));
+            newDesktop.DisconnectedPeripheral(new Screen());
+            newDesktop.StartUp();
 
             Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
         }
