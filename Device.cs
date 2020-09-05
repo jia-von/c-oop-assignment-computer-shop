@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using Computer_Shop.Peripheral;
 
@@ -48,9 +49,21 @@ namespace Computer_Shop
 
  */
         //A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and:
-        public void ConnectedPeripheral(Peripheral.Peripheral peripheral)
+        /*
+         Throws an exception if there are no available connectors of the connection-type of the peripheral.
+                Unless the type is “Integrated”.
+        Otherwise, adds the peripheral to the list.
+         */
+        public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen
         {
-            Peripherals.Add(peripheral);
+            try
+            {
+                    Peripherals.Add(peripheral);
+            }
+            catch (Exception)
+            {       
+                    throw new Exception();
+            }
         }
 
         /*

@@ -11,7 +11,7 @@ namespace Computer_Shop
         public Screen Screen => new Screen() { ConnectorType = Connector.Integrated };
         //A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
 
-        private IDictionary<Connector, int> _dictionary  {get; set; }
+        private IDictionary<Connector, int> _dictionary  { get; set; }
     //A default and greedy constructor.
 
     public Cellphone()
