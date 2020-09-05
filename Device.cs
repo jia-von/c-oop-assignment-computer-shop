@@ -30,34 +30,32 @@ namespace Computer_Shop
         public ReadOnlyDictionary<Connector, int> Connectors { get; set; }
 
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private
-        private List<Peripheral.Peripheral> Peripherals { get; set; }
+        public List<Peripheral.Peripheral> Peripherals { get; set; }
 
-        /*
-
-    Throws an exception if there are no available connectors of the connection-type of the peripheral.
-    Unless the type is “Integrated”.
-    Otherwise, adds the peripheral to the list.
-
- */
         //A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and:
         /*
          Throws an exception if there are no available connectors of the connection-type of the peripheral.
                 Unless the type is “Integrated”.
         Otherwise, adds the peripheral to the list.
          */
+
+        public Device()
+        {
+            Peripherals = new List<Peripheral.Peripheral>(); // constructor to initiate a list
+        }
         public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen because it is polymorphic
         {
-            try
-            {
+            //try
+            //{
                     Peripherals.Add(peripheral);
-            }
-            catch (Exception)
-            {
-                if (peripheral.ConnectorType.Equals(Connector.Integrated) != true)
-                {
-                    throw new Exception();
-                }
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    if (peripheral.ConnectorType.Equals(Connector.Integrated) != true)
+            //    {
+            //        throw new Exception();
+            //    }
+            //}
         }
 
         /*
@@ -65,7 +63,7 @@ namespace Computer_Shop
          */
         public void DisconnectedPeripheral(Peripheral.Peripheral peripheral)
         {
-            Peripherals.RemoveAll(x => x.ConnectorType.Equals(peripheral.ConnectorType.GetType()));
+            Peripherals.RemoveAll(x => x.Brand == peripheral.Brand); //remove based on brand because it is the most specific type
         }
 
         /*
