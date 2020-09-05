@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Computer_Shop.Peripheral;
 
@@ -13,17 +14,31 @@ namespace Computer_Shop
         //A “Keyboard” property that must have a “Keyboard” object with the “Integrated” connector type assigned.
         public Keyboard Keyboard { get; set; }
 
+        private IDictionary<Connector, int> _dictionary { get; set; }
+
         //A default and greedy constructor.
 
         public Laptop()
         {
+            Brand = "Default Desktop";
+            Speed = 0;
+            CPU = new CPU();
+            MemoryBank = new List<Memory>();
+            _dictionary = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
             Screen = new Screen();
+            Keyboard = new Keyboard();
         }
-        public Laptop(Screen screen, Keyboard keyboard, string brand)
+        public Laptop(string brand, double speed, CPU cpu, List<Memory> memoryBank, Dictionary<Connector, int> dictionary, Screen screen, Keyboard keyboard)
         {
+            Brand = brand;
+            Speed = speed;
+            CPU = cpu;
+            MemoryBank = memoryBank;
+            _dictionary = dictionary;
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
             Screen = screen;
             Keyboard = keyboard;
-            Brand = brand;
         }
 
     }

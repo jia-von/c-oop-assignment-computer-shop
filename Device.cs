@@ -9,17 +9,24 @@ namespace Computer_Shop
     //Create an abstract “Device” class with the following:
     public abstract class Device
     {
-        //A “Brand” property default public abstract
-        public string Brand { get; set; } 
+        //A “Brand” property (string).
+        public string Brand { get; set; }
+
+        //A “Speed” property (double).
+        public double Speed { get; set; }
 
         //A “CPU” property (reference to “CPU” object) -- Default public get/set
         public CPU CPU { get; set; }
 
-        //A “Memory” property (a list of “Memory” objects) --Default public get.set
-        public List<Memory> Memory { get; set; }
+        //A “MemoryBank” property (a list of “Memory” objects)
+        public List<Memory> MemoryBank { get; set; }
 
-        // A “Connectors” property (a read-only dictionary keyed with values of the Connector enumeration and valued with ints to represent the number of connections available)
-        public ReadOnlyDictionary<Peripheral.Peripheral.Connector, int> Connectors { get; set; }
+        /*
+         A “Connectors” property as a read-only dictionary. 
+            The keys will come from the Connector enumeration (enum = enumeration).
+             The values will be ints to represent the number of connections available.
+         */
+        public ReadOnlyDictionary<Connector, int> Connectors { get; set; }
 
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private
         private List<Peripheral.Peripheral> Peripherals { get; set; }
@@ -28,7 +35,7 @@ namespace Computer_Shop
         {
             Peripherals = new List<Peripheral.Peripheral>(); //initialize a list 
             CPU = new CPU();
-            Memory = new List<Memory>();
+            MemoryBank = new List<Memory>();
         }
 
         /*

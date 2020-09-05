@@ -8,8 +8,5 @@ namespace Computer_Shop
     {
         //A “Brand” property (string).
         public string Brand { get; set; }
-
-        //A “Speed” property (double).
-        public double Speed { get; set; }
     }
 }
