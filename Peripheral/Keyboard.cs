@@ -14,8 +14,6 @@ namespace Computer_Shop.Peripheral
         }
         //Added my own KeyType properties because the assignment requires a greedy constructor
         public Type KeyType { get; set; }
-        //A “ConnectorType” property with a value of the “Connector” enumeration.
-        public Connector ConnectorType { get; set; }
 
         //A default and greedy constructor.
 

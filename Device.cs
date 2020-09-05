@@ -77,7 +77,6 @@ namespace Computer_Shop
         /*
          An abstract “StartUp()” method that will be overridden in each derived class, with some functionality of your choice. Write something to the console, make the computer beep, whatever you’d like.
          */
-
         public abstract void StartUp();
     }
 }

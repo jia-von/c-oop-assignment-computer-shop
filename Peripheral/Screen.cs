@@ -12,9 +12,6 @@ namespace Computer_Shop.Peripheral
         //A “Height” property, in whole pixels (int).
         public int Height { get; set; }
 
-        //A “ConnectorType” with a value of the “Connector” enumeration.
-        public Connector ConnectorType { get; set; }
-
         //A default and greedy constructor.
 
         public Screen()
