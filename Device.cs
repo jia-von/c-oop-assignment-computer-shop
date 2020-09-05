@@ -61,8 +61,11 @@ namespace Computer_Shop
                     Peripherals.Add(peripheral);
             }
             catch (Exception)
-            {       
+            {
+                if (peripheral.ConnectorType.Equals(Connector.Integrated) != true)
+                {
                     throw new Exception();
+                }
             }
         }
 
