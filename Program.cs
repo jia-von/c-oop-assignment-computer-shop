@@ -31,6 +31,8 @@ namespace Computer_Shop
                 Screen = new Screen(1920, 1080, Connector.Integrated, "Generic PnP Monitor"),
                 Keyboard = new Keyboard(Keyboard.Type.Membrane, Connector.Integrated, "Standard")
             };
+
+            newDesktop.ConnectedPeripheral();
         }
     }
 }

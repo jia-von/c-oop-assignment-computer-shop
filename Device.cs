@@ -32,15 +32,6 @@ namespace Computer_Shop
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private
         private List<Peripheral.Peripheral> Peripherals { get; set; }
 
-        public Device()// default constructor
-        {
-            Brand = "Default Device";
-            Speed = 0;
-            CPU = new CPU();
-            MemoryBank = new List<Memory>();
-            Peripherals = new List<Peripheral.Peripheral>();
-        }
-
         /*
 
     Throws an exception if there are no available connectors of the connection-type of the peripheral.
