@@ -33,9 +33,11 @@ namespace Computer_Shop
 
         public Device()// default constructor
         {
-            Peripherals = new List<Peripheral.Peripheral>(); //initialize a list 
+            Brand = "Default Device";
+            Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>();
+            Peripherals = new List<Peripheral.Peripheral>();
         }
 
         /*
