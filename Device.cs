@@ -74,7 +74,7 @@ namespace Computer_Shop
          */
         public void DisconnectedPeripheral(Peripheral.Peripheral peripheral)
         {
-            Console.WriteLine(peripheral);
+            Peripherals.RemoveAll(x => x.ConnectorType.Equals(peripheral.ConnectorType.GetType()));
         }
 
         /*
