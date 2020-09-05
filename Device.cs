@@ -54,7 +54,7 @@ namespace Computer_Shop
                 Unless the type is “Integrated”.
         Otherwise, adds the peripheral to the list.
          */
-        public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen
+        public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen because it is polymorphic
         {
             try
             {
