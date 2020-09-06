@@ -20,9 +20,14 @@ namespace Computer_Shop
                 Ports = new Dictionary<Connector, int>() //One for microUsb charging port
             };
 
-            //Add memory for iPhone in RAM and standard phone only have 1 port
+            ////Add memory for iPhone in RAM and standard phone only have 1 port
             newCell.MemoryBank.Add(new Memory() { Brand = "Apple", Size = 4 });
             newCell.Ports.Add(Connector.MicroUSB, 1);
+
+            //Test the methods
+            newCell.ConnectedPeripheral(new Screen());
+            newCell.DisconnectedPeripheral(new Screen());
+            newCell.StartUp();
 
             Desktop newDesktop = new Desktop()
             {
