@@ -7,7 +7,7 @@ namespace Computer_Shop
     {
         static void Main(string[] args)
         {
- 
+
             Cellphone newCell = new Cellphone()
             {
                 Brand = "iPhone 11",
@@ -37,20 +37,11 @@ namespace Computer_Shop
             newDesktop.ConnectedPeripheral(new Keyboard(Keyboard.Type.Mechanical, Connector.USBTypeA, "Mr. Speedy Mech"));//Conneced to keyboard 
             newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant"));// Connected to mouse 
 
-            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}.");
+            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
 
-            newDesktop.DisconnectedPeripheral(new Screen());
+            newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD"));
 
-            //Cellphone doesn't need screen, keyboard, or mouse
-            newCell.ConnectedPeripheral(new Screen()); //Connected to screen 
-            newCell.ConnectedPeripheral(new Keyboard());//Conneced to keyboard 
-            newCell.ConnectedPeripheral(new Mouse());// Connected to mouse 
-
-            Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
-
-            newCell.DisconnectedPeripheral(new Screen());
-
-            Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
+            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
         }
     }
 }
