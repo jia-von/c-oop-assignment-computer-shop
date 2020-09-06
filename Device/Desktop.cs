@@ -10,7 +10,6 @@ namespace Computer_Shop
 
     //Create your dictionary in the constructor as a normal dictionary, then feed it into the constructor of ReadOnlyDictionary.
     {
-        private IDictionary<Connector, int> _dictionary { get; set; }
         //A default and greedy constructor.
         public Desktop()
         {
@@ -18,24 +17,20 @@ namespace Computer_Shop
             Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>();
-            _dictionary = new Dictionary<Connector, int>();
-            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary); //ReadOnly must have parameters of IDictionary<TKey,TValue>
         }
 
-        public Desktop(string brand, double speed, CPU cpu, List<Memory> memoryBank, Dictionary<Connector, int> dictionary)
+        public Desktop(string brand, double speed, CPU cpu, List<Memory> memoryBank)
         {
             Brand = brand;
             Speed = speed;
             CPU = cpu;
             MemoryBank = memoryBank;
-            _dictionary = dictionary;
-            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary); //ReadOnly must have parameters of IDictionary<TKey,TValue>
-            //@link: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1#properties
         }
 
         public override void StartUp()
         {
             Console.Beep();
+            Console.WriteLine("Desktop started up!");
         }
     }
 
