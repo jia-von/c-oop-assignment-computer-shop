@@ -58,16 +58,11 @@ namespace Computer_Shop
 
             //newDesktop.DisconnectedPeripheral(new Screen());
 
-            //Cellphone doesn't need screen, keyboard, or mouse
-            newCell.ConnectedPeripheral(new Screen()); //Connected to screen 
-            newCell.ConnectedPeripheral(new Keyboard());//Conneced to keyboard 
-            //newCell.ConnectedPeripheral(new Mouse());// Connected to mouse 
+            //Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
 
-            Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
+            //newCell.DisconnectedPeripheral(new Screen());
 
-            newCell.DisconnectedPeripheral(new Screen());
-
-            Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
+            //Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
         }
     }
 }
