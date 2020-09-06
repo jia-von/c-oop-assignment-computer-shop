@@ -27,7 +27,7 @@ namespace Computer_Shop
             The keys will come from the Connector enumeration (enum = enumeration).
              The values will be ints to represent the number of connections available.
          */
-        private IDictionary<Connector, int> _dictionary { get; set; }
+        public IDictionary<Connector, int> _dictionary { get; set; }
         public ReadOnlyDictionary<Connector, int> Connectors { get; set; }
 
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private

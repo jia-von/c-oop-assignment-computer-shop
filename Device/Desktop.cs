@@ -17,6 +17,8 @@ namespace Computer_Shop
             Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>();
+            _dictionary = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
         }
 
         public Desktop(string brand, double speed, CPU cpu, List<Memory> memoryBank)

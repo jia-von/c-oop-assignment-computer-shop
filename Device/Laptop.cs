@@ -24,6 +24,8 @@ namespace Computer_Shop
             MemoryBank = new List<Memory>();
             Screen = new Screen();
             Keyboard = new Keyboard();
+            _dictionary = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
         }
         public Laptop(string brand, double speed, CPU cpu, List<Memory> memoryBank, Screen screen, Keyboard keyboard)
         {
