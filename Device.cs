@@ -59,7 +59,10 @@ namespace Computer_Shop
             {
                 Peripherals.Add(peripheral);
             }
-            Console.WriteLine(Peripherals.Count);
+            else 
+            {
+                throw new Exception();
+            }
         }
 
         /*
