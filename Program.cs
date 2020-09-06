@@ -20,12 +20,12 @@ namespace Computer_Shop
                 _dictionary = new Dictionary<Connector, int>() { { Connector.Integrated, 1} }
             };
 
-            //Desktop newDesktop = new Desktop()
-            //{
-            //    Brand = "Joe's Battlestation",
-            //    Speed = 3.80,
-            //    CPU = new CPU() { Brand = "AMD Ryzen 5 3600 X" }
-            //};
+            Desktop newDesktop = new Desktop()
+            {
+                Brand = "Joe's Battlestation",
+                Speed = 3.80,
+                CPU = new CPU() { Brand = "AMD Ryzen 5 3600 X" }
+            };
 
             //Laptop newLaptop = new Laptop()
             //{

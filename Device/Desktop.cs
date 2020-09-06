@@ -27,6 +27,8 @@ namespace Computer_Shop
             Speed = speed;
             CPU = cpu;
             MemoryBank = memoryBank;
+            _dictionary = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
         }
 
         public override void StartUp()

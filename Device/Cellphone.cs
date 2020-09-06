@@ -24,9 +24,17 @@ namespace Computer_Shop
             MemoryBank = new List<Memory>();
             _dictionary = new Dictionary<Connector, int>();
             Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
+            Screen = new Screen();
         }
-        public Cellphone(Screen screen)
+
+        public Cellphone(string brand, int speed, CPU cpu, List<Memory> memory, Dictionary<Connector, int> dictionary, Screen screen)
         {
+            Brand = brand;
+            Speed = speed;
+            CPU = cpu;
+            MemoryBank = memory;
+            _dictionary = dictionary;
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
             Screen = screen;
         }
 

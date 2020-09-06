@@ -22,10 +22,10 @@ namespace Computer_Shop
             Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>();
-            Screen = new Screen();
-            Keyboard = new Keyboard();
             _dictionary = new Dictionary<Connector, int>();
             Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
+            Screen = new Screen();
+            Keyboard = new Keyboard();
         }
         public Laptop(string brand, double speed, CPU cpu, List<Memory> memoryBank, Screen screen, Keyboard keyboard)
         {
@@ -33,6 +33,8 @@ namespace Computer_Shop
             Speed = speed;
             CPU = cpu;
             MemoryBank = memoryBank;
+            _dictionary = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
             Screen = screen;
             Keyboard = keyboard;
         }
