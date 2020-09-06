@@ -12,5 +12,17 @@ namespace Computer_Shop
         //A “Size” property (int).
         public int Size { get; set; } //default public get/set
 
+        public Memory ()
+        {
+            Brand = "Default Memory";
+            Size = 16;
+        }
+
+        public Memory (string brand, int size)
+        {
+            Brand = brand;
+            Size = size;
+        }
+
     }
 }
