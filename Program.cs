@@ -55,23 +55,20 @@ namespace Computer_Shop
             newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD")); //Remove based on brand type
 
 
-            //Laptop newLaptop = new Laptop()
-            //{
-            //    Brand = "ASUS",
-            //    Speed = 1.60,
-            //    CPU = new CPU() { Brand = "Intel(R)" },
-            //    MemoryBank = new List<Memory>(),
-            //    Ports = new Dictionary<Connector, int>(),
-            //    Screen = new Screen(1920, 1080, Connector.Integrated, "Generic PnP Monitor"),
-            //    Keyboard = new Keyboard(Keyboard.Type.Membrane, Connector.Integrated, "Standard")
-            //};
+            Laptop newLaptop = new Laptop()
+            {
+                Brand = "ASUS",
+                Speed = 1.60,
+                CPU = new CPU() { Brand = "Intel(R)" },
+                MemoryBank = new List<Memory>(),
+                Ports = new Dictionary<Connector, int>(),
+                Screen = new Screen(1920, 1080, Connector.Integrated, "Generic PnP Monitor"),
+                Keyboard = new Keyboard(Keyboard.Type.Membrane, Connector.Integrated, "Standard")
+            };
 
-            ////Add memory and connectors for Laptop
-            //newLaptop.Ports.Add(Connector.USBTypeA, 2);
-            //newLaptop.Ports.Add(Connector.DisplayPort, 1);
-
-            ////Add peripherals
-            //newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant"));// Connected to mouse 
+            //Add memory and connectors for Laptop
+            newLaptop.Ports.Add(Connector.USBTypeA, 2);
+            newLaptop.Ports.Add(Connector.DisplayPort, 1);
 
         }
     }
