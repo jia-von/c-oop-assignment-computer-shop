@@ -17,8 +17,12 @@ namespace Computer_Shop
                 CPU = new CPU() { Brand = "Apple A13 Bionic" },
                 Screen = new Screen(828, 1729, Connector.Integrated, "LG Display Co."),
                 MemoryBank = new List<Memory>(),
-                Ports = new Dictionary<Connector, int>() { { Connector.MicroUSB, 1} } //One for microUsb charging port
+                Ports = new Dictionary<Connector, int>() //One for microUsb charging port
             };
+
+            //Add memory for iPhone in RAM and standard phone only have 1 port
+            newCell.MemoryBank.Add(new Memory() { Brand = "Apple", Size = 4 });
+            newCell.Ports.Add(Connector.MicroUSB, 1);
 
             Desktop newDesktop = new Desktop()
             {
