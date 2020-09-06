@@ -61,7 +61,7 @@ namespace Computer_Shop
          */
         public void DisconnectedPeripheral(Peripheral.Peripheral peripheral)
         {
-            Peripherals.RemoveAll(x => x.Brand == peripheral.Brand); //remove based on brand because it is the most specific type
+            Peripherals.RemoveAll(x => x.Brand == peripheral.Brand); //remove based on Brand
         }
 
         /*

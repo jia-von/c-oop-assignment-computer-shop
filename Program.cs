@@ -49,6 +49,10 @@ namespace Computer_Shop
             newDesktop.ConnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD")); //Connected to a screen
             newDesktop.ConnectedPeripheral(new Keyboard(Keyboard.Type.Mechanical, Connector.USBTypeA, "Mr. Speedy Mech"));//Conneced to keyboard 
             newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant"));// Connected to mouse 
+            newDesktop.ConnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Walmart")); //Connected to a screen
+
+            //Check with disconnect
+            newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD")); //Remove based on brand type
 
 
             //Laptop newLaptop = new Laptop()
@@ -56,26 +60,18 @@ namespace Computer_Shop
             //    Brand = "ASUS",
             //    Speed = 1.60,
             //    CPU = new CPU() { Brand = "Intel(R)" },
+            //    MemoryBank = new List<Memory>(),
+            //    Ports = new Dictionary<Connector, int>(),
             //    Screen = new Screen(1920, 1080, Connector.Integrated, "Generic PnP Monitor"),
             //    Keyboard = new Keyboard(Keyboard.Type.Membrane, Connector.Integrated, "Standard")
             //};
 
-            //Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}.");
+            ////Add memory and connectors for Laptop
+            //newLaptop.Ports.Add(Connector.USBTypeA, 2);
+            //newLaptop.Ports.Add(Connector.DisplayPort, 1);
 
-            //newDesktop.DisconnectedPeripheral(new Screen());
-
-            //Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
-
-            //newCell.DisconnectedPeripheral(new Screen());
-
-            //Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
-
-            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
-
-            newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD"));
-
-            newDesktop.StartUp();
-            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
+            ////Add peripherals
+            //newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant"));// Connected to mouse 
 
         }
     }
