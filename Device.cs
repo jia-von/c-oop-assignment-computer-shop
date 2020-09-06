@@ -43,12 +43,7 @@ namespace Computer_Shop
             Ports = new Dictionary<Connector, int>();
             Connectors = new ReadOnlyDictionary<Connector, int>(Ports); //ReadOnly must have parameters of IDictionary<TKey,TValue>@link: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1#properties
         }
-        //A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and:
-        /*
-             Throws an exception if there are no available connectors of the connection-type of the peripheral.
-             Unless the type is “Integrated”.
-             Otherwise, adds the peripheral to the list.
-         */
+      
         public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen because it is polymorphic
         {
             if(Peripherals.Count < Ports.Count)
@@ -66,9 +61,8 @@ namespace Computer_Shop
          */
         public void DisconnectedPeripheral(Peripheral.Peripheral peripheral)
         {
-            Peripherals.RemoveAll(x => x.GetType() == peripheral.GetType());
+            Peripherals.RemoveAll(x => x.Brand == peripheral.Brand); //remove based on brand because it is the most specific type
         }
-        //Note to User, it is assumed that that the computer has only one screen, one mouse, and one keyboard as peripheral. It is understandable that the computer have have more than one of these peripherals. To simplify things for removal, I decided it will be removed based on the GetType();
 
         /*
          An abstract “StartUp()” method that will be overridden in each derived class, with some functionality of your choice. Write something to the console, make the computer beep, whatever you’d like.

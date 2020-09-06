@@ -50,6 +50,7 @@ namespace Computer_Shop
             newDesktop.ConnectedPeripheral(new Keyboard(Keyboard.Type.Mechanical, Connector.USBTypeA, "Mr. Speedy Mech"));//Conneced to keyboard 
             newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant"));// Connected to mouse 
 
+
             //Laptop newLaptop = new Laptop()
             //{
             //    Brand = "ASUS",
@@ -68,6 +69,14 @@ namespace Computer_Shop
             //newCell.DisconnectedPeripheral(new Screen());
 
             //Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
+
+            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
+
+            newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD"));
+
+            newDesktop.StartUp();
+            Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
+
         }
     }
 }
