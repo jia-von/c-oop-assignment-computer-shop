@@ -12,28 +12,22 @@ namespace Computer_Shop
         public Screen Screen 
         { 
           get => new Screen() { ConnectorType = Connector.Integrated };
-          set => new Screen() { ConnectorType = Connector.Integrated }; //A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
+          set => new Screen() { ConnectorType = Connector.Integrated } ; //A “Screen” property that must have a “Screen” object with the “Integrated” connector type assigned.
         }
 
         //A default and greedy constructor.
         public Cellphone()
         {
-            Brand = "Default Cellphone";
+            Brand = "Default Device";
             Speed = 0;
             CPU = new CPU();
-            Screen = new Screen();
             MemoryBank = new List<Memory>();
             _dictionary = new Dictionary<Connector, int>();
             Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
         }
-        public Cellphone(string brand, double speed, CPU cpu, List<Memory> memoryBank)
+        public Cellphone(Screen screen)
         {
-            Brand = brand;
-            Speed = speed;
-            CPU = cpu;
-            MemoryBank = memoryBank;
-            _dictionary = new Dictionary<Connector, int>();
-            Connectors = new ReadOnlyDictionary<Connector, int>(_dictionary);
+            Screen = screen;
         }
 
         public override void StartUp()
