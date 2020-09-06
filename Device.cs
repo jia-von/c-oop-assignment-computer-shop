@@ -55,10 +55,6 @@ namespace Computer_Shop
             {
                 Peripherals.Add(peripheral);
             }
-            else if (peripheral.ConnectorType.Equals(Connector.Integrated))
-            {
-                Peripherals.Add(peripheral);
-            }
             else 
             {
                 throw new Exception();
