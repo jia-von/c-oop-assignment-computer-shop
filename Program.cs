@@ -41,6 +41,7 @@ namespace Computer_Shop
 
             newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD"));
 
+            newDesktop.StartUp();
             Console.WriteLine($"The {newDesktop.Brand} {newDesktop.CPU.Brand} with speed of {newDesktop.Speed}. A total of {newDesktop.Peripherals.Count} connected");
         }
     }
