@@ -27,35 +27,33 @@ namespace Computer_Shop
             The keys will come from the Connector enumeration (enum = enumeration).
              The values will be ints to represent the number of connections available.
          */
+        public IDictionary<Connector, int> Ports { get; set; }
         public ReadOnlyDictionary<Connector, int> Connectors { get; set; }
 
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private
-        public List<Peripheral.Peripheral> Peripherals { get; set; }
-
-        //A “ConnectPeripheral()” method that accepts a polymorphic peripheral argument and:
-        /*
-         Throws an exception if there are no available connectors of the connection-type of the peripheral.
-                Unless the type is “Integrated”.
-        Otherwise, adds the peripheral to the list.
-         */
+        private List<Peripheral.Peripheral> Peripherals { get; set; }
 
         public Device()
         {
+            Brand = "Default Device";
+            Speed = 0;
+            CPU = new CPU();
+            MemoryBank = new List<Memory>();
             Peripherals = new List<Peripheral.Peripheral>(); // constructor to initiate a list
+            Ports = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(Ports); //ReadOnly must have parameters of IDictionary<TKey,TValue>@link: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1#properties
         }
+      
         public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen because it is polymorphic
         {
-            //try
-            //{
-                    Peripherals.Add(peripheral);
-            //}
-            //catch (Exception)
-            //{
-            //    if (peripheral.ConnectorType.Equals(Connector.Integrated) != true)
-            //    {
-            //        throw new Exception();
-            //    }
-            //}
+            if(Peripherals.Count < Ports.Count)
+            {
+                Peripherals.Add(peripheral);
+            }
+            else 
+            {
+                throw new Exception();
+            }
         }
 
         /*

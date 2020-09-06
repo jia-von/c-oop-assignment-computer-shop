@@ -22,6 +22,8 @@ namespace Computer_Shop
             Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>();
+            Ports = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(Ports);
             Screen = new Screen();
             Keyboard = new Keyboard();
         }
@@ -31,6 +33,8 @@ namespace Computer_Shop
             Speed = speed;
             CPU = cpu;
             MemoryBank = memoryBank;
+            Ports = new Dictionary<Connector, int>();
+            Connectors = new ReadOnlyDictionary<Connector, int>(Ports);
             Screen = screen;
             Keyboard = keyboard;
         }
