@@ -48,7 +48,7 @@ namespace Computer_Shop
             //Cellphone doesn't need screen, keyboard, or mouse
             newCell.ConnectedPeripheral(new Screen()); //Connected to screen 
             newCell.ConnectedPeripheral(new Keyboard());//Conneced to keyboard 
-            newCell.ConnectedPeripheral(new Mouse());// Connected to mouse 
+            //newCell.ConnectedPeripheral(new Mouse());// Connected to mouse 
 
             Console.WriteLine($"The {newCell.Brand} {newCell.CPU.Brand} with speed of {newCell.Speed}.");
 
