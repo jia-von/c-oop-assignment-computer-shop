@@ -32,7 +32,8 @@ namespace Computer_Shop
                 Speed = 3.80,
                 CPU = new CPU() { Brand = "AMD Ryzen 5 3600 X" },
                 MemoryBank = new List<Memory>(),
-                Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>() { { Connector.DisplayPort, 2 }, { Connector.USBTypeC, 1 }, { Connector.USBTypeA, 4 }, { Connector.MicroUSB, 1 } }) //Adding new Connectors to the desktop
+                //Adding new Connectors to the desktop
+                Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>() { { Connector.DisplayPort, 2 }, { Connector.USBTypeC, 1 }, { Connector.USBTypeA, 4 }, { Connector.MicroUSB, 1 } }) 
             };
 
             //Add memory for the Desktop in RAM and determine how many connectors there is
@@ -43,7 +44,6 @@ namespace Computer_Shop
             newDesktop.ConnectedPeripheral(new Keyboard(Keyboard.Type.Mechanical, Connector.USBTypeA, "Mr. Speedy Mech"));//Conneced to keyboard 
 
             // Connected to mouse however connection is not available based on the desktop made without USBTypeB
-
             //newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant")); //--> Test here by uncommenting this code
 
             newDesktop.ConnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Walmart")); //Connected to a screen
