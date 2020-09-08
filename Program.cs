@@ -24,8 +24,6 @@ namespace Computer_Shop
             newCell.MemoryBank.Add(new Memory() { Brand = "Apple", Size = 4 });
 
             //Test the methods
-            newCell.ConnectedPeripheral(new Screen()); //connect the peripherals
-            newCell.DisconnectedPeripheral(new Screen()); //disconnect the peripherals
             newCell.StartUp(); //To startup the device
 
             Desktop newDesktop = new Desktop()
@@ -43,11 +41,16 @@ namespace Computer_Shop
             //Add Peripherals for Desktop
             newDesktop.ConnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD")); //Connected to a screen
             newDesktop.ConnectedPeripheral(new Keyboard(Keyboard.Type.Mechanical, Connector.USBTypeA, "Mr. Speedy Mech"));//Conneced to keyboard 
-            newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant"));// Connected to mouse 
+
+            // Connected to mouse however connection is not available based on the desktop made without USBTypeB
+
+            //newDesktop.ConnectedPeripheral(new Mouse(7, Connector.USBTypeB, "4 Seven Digit Mutant")); //--> Test here by uncommenting this code
+
             newDesktop.ConnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Walmart")); //Connected to a screen
 
-            ////Check with disconnect
+            //Check with disconnect
             newDesktop.DisconnectedPeripheral(new Screen(1920, 1080, Connector.DisplayPort, "Mr. Gaming HD")); //Remove based on brand type
+            newDesktop.StartUp(); //To startup the device
 
 
             Laptop newLaptop = new Laptop()

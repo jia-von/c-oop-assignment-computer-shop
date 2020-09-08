@@ -44,13 +44,13 @@ namespace Computer_Shop
       
         public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen because it is polymorphic
         {
-            if(Peripherals.Count < Connectors.Count)
+            if(Connectors.TryGetValue(peripheral.ConnectorType, out int value)) //Validation to add peripheral based on the available connection type.
             {
                 Peripherals.Add(peripheral);
             }
-            else 
+            else
             {
-                throw new Exception();
+                throw new Exception(); //throw exception with there is no available ports that matches the peripheral
             }
         }
 
