@@ -22,19 +22,17 @@ namespace Computer_Shop
             Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>();
-            Ports = new Dictionary<Connector, int>();
-            Connectors = new ReadOnlyDictionary<Connector, int>(Ports);
+            Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>());
             Screen = new Screen();
         }
 
-        public Cellphone(string brand, int speed, CPU cpu, List<Memory> memory, Dictionary<Connector, int> dictionary, Screen screen)
+        public Cellphone(string brand, int speed, CPU cpu, List<Memory> memory,  Screen screen)
         {
             Brand = brand;
             Speed = speed;
             CPU = cpu;
             MemoryBank = memory;
-            Ports = dictionary;
-            Connectors = new ReadOnlyDictionary<Connector, int>(Ports);
+            Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>());
             Screen = screen;
         }
 

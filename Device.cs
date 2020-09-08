@@ -27,7 +27,6 @@ namespace Computer_Shop
             The keys will come from the Connector enumeration (enum = enumeration).
              The values will be ints to represent the number of connections available.
          */
-        public IDictionary<Connector, int> Ports { get; set; }
         public ReadOnlyDictionary<Connector, int> Connectors { get; set; }
 
         //A “Peripherals” property (a polymorphic list of Peripheral objects) private
@@ -40,13 +39,12 @@ namespace Computer_Shop
             CPU = new CPU();
             MemoryBank = new List<Memory>();
             Peripherals = new List<Peripheral.Peripheral>(); // constructor to initiate a list
-            Ports = new Dictionary<Connector, int>();
-            Connectors = new ReadOnlyDictionary<Connector, int>(Ports); //ReadOnly must have parameters of IDictionary<TKey,TValue>@link: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1#properties
+            Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>()); //ReadOnly must have parameters of IDictionary<TKey,TValue>@link: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1#properties
         }
       
         public void ConnectedPeripheral(Peripheral.Peripheral peripheral)//accepting objects of either keyboard, mouse, or screen because it is polymorphic
         {
-            if(Peripherals.Count < Ports.Count)
+            if(Peripherals.Count < Connectors.Count)
             {
                 Peripherals.Add(peripheral);
             }

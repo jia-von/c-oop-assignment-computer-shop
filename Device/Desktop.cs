@@ -17,8 +17,7 @@ namespace Computer_Shop
             Speed = 0;
             CPU = new CPU();
             MemoryBank = new List<Memory>() { };
-            Ports = new Dictionary<Connector, int>();
-            Connectors = new ReadOnlyDictionary<Connector, int>(Ports);
+            Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>());
         }
 
         public Desktop(string brand, double speed, CPU cpu, List<Memory> memoryBank)
@@ -27,8 +26,7 @@ namespace Computer_Shop
             Speed = speed;
             CPU = cpu;
             MemoryBank = memoryBank;
-            Ports = new Dictionary<Connector, int>();
-            Connectors = new ReadOnlyDictionary<Connector, int>(Ports);
+            Connectors = new ReadOnlyDictionary<Connector, int>(new Dictionary<Connector, int>());
         }
 
         public override void StartUp()
