@@ -14,9 +14,9 @@ start devenv Computer-Shop.sln
 
 ## Computer Shop Scenario
 
-- A program, ***Computer-Shop*** was written that will create objects ***Cellphones***, ***CPU***, ***Desktop***, and ***Laptop*** . These objects inherites from base class ***Device***. Additionally, the hypothetical ***Computer-Shop*** also create peripherals like ***Keyboard***, ***Mouse***, and ***Screen***. For user to attached and create their own ***CPU Device***. These peripherals are classes that inherites from base class ***Peripheral*** with ***ConnectorType*** properties such as USB Type-A, microUSB, and DisplayPort. 
+- A program, `Computer-Shop.sln` was written that will create objects using classes: `Cellphones.cs`, `CPU.cs`, `Desktop.cs`, and `Laptop.cs` . These class inherites from base class `Device.cs`. Additionally, this hypothetical `Computer-Shop.sln` can create peripherals like `Keyboard.cs`, `Mouse.cs`, and `Screen.cs`. For user to attached and create their own ***CPU Device***. These peripherals are classes that inherites from base class `Peripheral.cs` with ***ConnectorType*** properties such as USB Type-A, microUSB, and DisplayPort. 
 
-- The user within the ***Computer-Shop*** can create a ***CPU*** with specified ***Peripherals***, ***ConnectorType***, and ***Peripherals***. 
+- The user within the `Computer-Shop.sln` can create a ***CPU*** with specified ***Peripherals*** and ***ConnectorType***. 
 
 - The user can also connect/disconnect these peripherals based on the connector type and port availabilities using `ConnectPeripheral()` and `DisconnectPeripheral()` methods which accepts polymorphic arguement. 
 
