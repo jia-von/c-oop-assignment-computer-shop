@@ -1,6 +1,6 @@
 # C# Object-Orientated Programming - Computer Shop Scenario
 
-The goal of this assignment to help me familiarized with class and object creation. This assignment touches a wide range of object orientated concepts such as properties, constructors, inheritance, polymorphism, `ReadOnlyDictionary\<TKey, TValue\>` and enumerations. 
+The goal of this assignment to help me familiarized with class and object creation. This assignment touches a wide range of object orientated concepts such as properties, constructors, inheritance, polymorphism, `ReadOnlyDictionary<TKey, TValue>` and enumerations. 
 
 ## Installation
 
