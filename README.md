@@ -6,9 +6,9 @@ The goal of this assignment to help me familiarized with class and object creati
 
 ```bash
 
-git clone https://github.com/jia-von/c-oop-assignment-computer-shop.git
-cd c-oop-assignment-computer-shop
-start devenv Computer-Shop.sln
+$ git clone https://github.com/jia-von/c-oop-assignment-computer-shop.git
+$ cd c-oop-assignment-computer-shop
+$ start devenv Computer-Shop.sln
 
 ```
 
